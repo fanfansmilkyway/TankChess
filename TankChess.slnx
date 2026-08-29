@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="TankChess/TankChess.vcxproj" Id="94d9c33e-c532-4d54-8097-f2f263ea6692" />
+</Solution>

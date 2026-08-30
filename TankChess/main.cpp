@@ -8,8 +8,8 @@ int main() {
     Move move = {
         .from_file = 2,
         .from_rank = 2,
-        .to_file = 4,
-        .to_rank = 6,
+        .to_file = 2,
+        .to_rank = 5,
         .orientation = Orientation::NE
     };
 
@@ -18,6 +18,7 @@ int main() {
     make_move(position, move);
 
     position_plotter(position);
-
+    
+    std::cout << static_cast<int>(generate_legal_moves(position, 12, 2)[0].to_rank);
     return 0;
 }

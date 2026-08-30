@@ -79,8 +79,15 @@ void position_plotter(const Position& current_position) {
 	}
 }
 
-
-bool if_square_occupied(const Position& position, const std::uint8_t file, const std::uint8_t rank) {
-	// Check if occupied by obstacle
-	return true;
+bool if_square_occupied(const Position& position, const int file, const int rank) {
+	// Check if occupied by obstacle, true for occupied
+	if (map_obstacles[file][rank]) {
+		return true; // occupied by obstacle
+	}
+	if (position.board[file][rank].piece_type != PieceType::Empty) {
+		return true; // occupied by tank
+	}
+	else {
+		return false;
+	}
 }

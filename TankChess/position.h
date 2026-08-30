@@ -17,7 +17,7 @@ enum class Orientation {
     // Values are assigned in clockwise order
 };
 
-// We call Tanks, Destroyed Tanks(Obstacle) 'pieces'
+// We call Tanks, Destroyed Tanks(Obstacle) 'pieces'. Values are their speeds.
 enum class PieceType
 {
     Empty,
@@ -52,4 +52,4 @@ Position init_position(); // Return the default initial position of 16x16 map
 
 void position_plotter(const Position& current_position); // Plot the map to terminal
 
-bool if_square_occupied(const Position& position, const std::uint8_t file, const std::uint8_t rank); // Check whether the square if available to go to becaused of being occupied by obstacle or tank
+bool if_square_occupied(const Position& position, const int file, const int rank); // Check whether the square if available to go to becaused of being occupied by obstacle or tank

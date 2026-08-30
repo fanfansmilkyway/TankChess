@@ -1,5 +1,4 @@
 #include <iostream>
-#include "map.h"
 #include "position.h"
 #include "move.h"
 
@@ -14,11 +13,11 @@ int main() {
         .orientation = Orientation::NE
     };
 
-    map_plotter(position);
+    position_plotter(position);
 
     make_move(position, move);
 
-    map_plotter(position);
+    position_plotter(position);
 
     return 0;
 }

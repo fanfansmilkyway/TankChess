@@ -139,13 +139,11 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="map.cpp" />
     <ClCompile Include="move.cpp" />
     <ClCompile Include="position.cpp" />
-    <ClCompile Include="TankChess.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="map.h" />
     <ClInclude Include="move.h" />
     <ClInclude Include="position.h" />
   </ItemGroup>

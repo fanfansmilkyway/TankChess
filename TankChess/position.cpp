@@ -1,4 +1,24 @@
 #include "position.h"
+#include <iostream>
+
+extern bool map_obstacles[16][16] = {
+	{0},
+	{0,0,0,0,0,1,1,0,0,0,0,0,1,1,1},
+	{0,0,0,0,0,1,0,0,1,1},
+	{0,0,1,0,0,0,0,0,1,1,},
+	{0,0,1,0,0,0,0,0,1,0,0,0,1,1,1},
+	{0,0,0,0,0,1,0,0,0,0,0,0,0,1,1},
+	{0,0,0,0,0,1,0,0,0,0,1},
+	{0,0,0,0,1,1,0,0,0,0,1,1},
+	{0,0,0,0,1,1,0,0,0,0,1,1},
+	{0,0,0,0,0,1,0,0,0,0,1},
+	{0,1,1,0,0,0,0,0,0,0,1},
+	{0,1,1,1,0,0,0,1,0,0,0,0,0,1},
+	{0,0,0,0,0,0,1,1,0,0,0,0,0,1},
+	{0,0,0,0,0,0,1,1,0,0,1},
+	{0,1,1,1,0,0,0,0,0,1,1},
+	{0}
+};
 
 Position init_position() {
 	Position position;
@@ -34,3 +54,33 @@ Position init_position() {
 	position.side_to_move = Side::White;
 	return position;
 };
+
+void position_plotter(const Position& current_position) {
+	std::cout << '\n';
+	for (int rank = 15; rank >= 0; rank--) {
+
+		for (int file = 0; file <= 15; file++) {
+
+			if (map_obstacles[file][rank]) {
+				std::cout << "#";
+			}
+
+			else if (current_position.board[file][rank].piece_type != PieceType::Empty) {
+				// Check if the square is occupied by a tank
+				std::cout << "T";
+			}
+
+			else {
+				std::cout << "_";
+			}
+		}
+
+		std::cout << '\n';
+	}
+}
+
+
+bool if_square_occupied(const Position& position, const std::uint8_t file, const std::uint8_t rank) {
+	// Check if occupied by obstacle
+	return true;
+}

@@ -1,5 +1,17 @@
 #pragma once
 
+enum class Orientation {
+    N = 0,
+    NE = 1,
+    E = 2,
+    SE = 3,
+    S = 4,
+    SW = 5,
+    W = 6,
+    NW = 7
+    // Values are assigned in clockwise order
+};
+
 // We call Tanks, Destroyed Tanks(Obstacle) 'pieces'
 enum class PieceType
 {
@@ -22,6 +34,7 @@ struct Piece
 {
     PieceType piece_type = PieceType::Empty;
     Side side = Side::None;
+    Orientation orientation = (side == Side::White) ? Orientation::N : Orientation::S; // White's orientation is North by default
 };
 
 struct Position

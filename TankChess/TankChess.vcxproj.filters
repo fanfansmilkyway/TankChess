@@ -24,12 +24,18 @@
     <ClCompile Include="position.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="move.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="map.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="position.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="move.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

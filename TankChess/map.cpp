@@ -22,6 +22,7 @@ bool map_obstacles[16][16] = {
 };
 
 void map_plotter(const Position& current_position) {
+    std::cout << '\n';
     for (int rank = 15; rank >= 0; rank--) {
 
         for (int file = 0; file <=15; file++) {

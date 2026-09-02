@@ -87,6 +87,9 @@ bool if_square_occupied(const Position& position, const int file, const int rank
 	if (position.board[file][rank].piece_type != PieceType::Empty) {
 		return true; // occupied by tank
 	}
+	if (file < 0 || file > 15 || rank < 0 || rank > 15) {
+		return true; // out of map
+	}
 	else {
 		return false;
 	}

@@ -3,6 +3,9 @@
 #include "position.h"
 #include "move.h"
 
+// Tank Chess Engine
+// Made by Fan Shiyuan
+
 int main() {
     std::clock_t clk_start = std::clock();
 

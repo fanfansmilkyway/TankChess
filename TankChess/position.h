@@ -50,6 +50,8 @@ struct Position
 
 Position init_position(); // Return the default initial position of 16x16 map
 
+Position init_debug_position();
+
 void position_plotter(const Position& current_position); // Plot the map to terminal
 
 bool if_square_occupied(const Position& position, const int file, const int rank); // Check whether the square if available to go to becaused of being occupied by obstacle or tank

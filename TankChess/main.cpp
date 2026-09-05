@@ -16,10 +16,12 @@ int main() {
        
     position_plotter(position);
     
-    std::vector<Move> moves = generate_legal_moves(position, 3, 15);
+    std::vector<Move> moves = generate_legal_moves(position, 5, 0);
     for (const Move& move : moves) {
         move_announcer(move);
     }
+
+    std::cout << "\n\n" << "Total Moves Found: " << moves.size();
 
 
 
